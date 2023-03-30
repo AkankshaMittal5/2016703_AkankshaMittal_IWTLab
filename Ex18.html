@@ -1,0 +1,74 @@
+<!-- Create an infinite animation of an element moving in a square pattern. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise18</title>
+    <style>
+        body{
+            background:linear-gradient(135deg,rgb(81,228,228) 2%, rgb(207,166,62) 50%, 
+                rgb(81, 228, 228));
+        }
+        h1{
+            text-shadow: 2px 2px rgb(182, 177, 177);
+        }
+        .container{
+            height:100px;
+            width:100px;
+            background-color: maroon;
+            border-radius: 30px;
+            border:2px solid rgb(187, 252, 11);
+            box-shadow: 10px 10px rgb(187, 252, 11);
+            animation-name: animate1;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+        @keyframes animate1{
+           0%{
+            background-color: maroon;
+            border:2px solid rgb(187, 252, 11);
+            box-shadow: 10px 10px rgb(187, 252, 11);
+            left:0px;
+            top:0px;
+    
+           }
+           25%{
+             background-color: rgb(33, 192, 104);
+            border:2px solid rgb(252, 188, 11);
+            box-shadow: 10px 10px rgb(252, 188, 11);
+            left:200px;
+            top:0px;
+         }
+           50%{
+             background-color: rgb(25, 161, 214);
+            border:2px solid rgb(218, 68, 155);
+            box-shadow: 10px 10px rgb(218, 68, 155);
+            left:200px;
+            top:200px;
+           }
+           75%{
+            background-color: rgb(139, 49, 199);
+            border:2px solid rgb(223, 173, 37);
+            box-shadow: 10px 10px rgb(223, 173, 37);
+            left:0px;
+            top:200px;
+           }
+           100%{
+             background-color: maroon;
+            border:2px solid rgb(187, 252, 11);
+            box-shadow: 10px 10px rgb(187, 252, 11);
+            left:0px;
+            top:0px;
+           }
+        }
+    </style>
+</head>
+<body>
+    <h1>Infinite Animation</h1>
+    <div class="container"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--9.	Create a user feedback page which asks questions about a software product. You are required to use 
+checkbox, radio buttons,and drop-down, textarea and various text input type for this. 
+Structure the web page using HTML table.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise9</title>
+</head>
+<body bgcolor="Chocolate">
+    <h1 align="center"><i>Feedback Form</i></h1>
+    <hr align="center" color="black" size="5" width="30%">
+    <form>
+        <table width="80%" height="80%" bgcolor="cadetblue">
+            <tr>
+                <th colspan="5"><h2>Please fill the form...</h2></th>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td colspan="4"><input type="email" id="mail" name="mymail"></td>
+            </tr>
+             <tr>
+                <td><label>Rate this product</label></td>
+                <td>Excellent:<input type="radio" name="expect" value="ex"></td>
+                <td>Good:<input type="radio" name="expect" value="go"></td>
+                <td>Average:<input type="radio" name="expect" value="av"></td>
+                <td>Poor:<input type="radio" name="expect" value="po"></td>
+             </tr>
+             <tr>
+                <td colspan="5"><label>How did you hear about our company?</label></td>
+             </tr>
+             <tr>
+                <td colspan="5"><select name="about">
+                    <option>Social Media</option>
+                    <option>Advertising</option>
+                    <option>Refund</option>
+                </select>
+
+                </td>
+             </tr>
+             <tr>
+                <td><label>Comment</label></tr></td>
+                <td colspan="4"><textarea placeholder="Any Comments....."></textarea></td>
+             </tr>
+             <tr>
+                <td colspan="4" align="left"><input type="submit"></td>
+             </tr>
+
+        </table>
+    </form>
+</body>
+</html>

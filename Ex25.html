@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+			<title>Form Validation</title>
+			<style>
+				div{
+					height:500px;
+					width:800px;
+					background-color: chocolate;
+					text-align: center;
+				}
+				form{
+					margin: 0px;
+					width: 600px;
+				}
+				input{
+					height: 30px;
+					margin: 10px;
+				}
+			</style>
+	</head>
+	<body>
+		<form onsubmit="validate()" method="get">
+			<input type="text" placeholder="Enter first name: " name="val"><br>
+			<input type="text" placeholder="Enter last name: " name="val"><br>
+			<input type="text" placeholder="Enter user ID: " name="val"><br>
+			<input type="text" placeholder="Enter password: " name="val"><br>
+			<input type="text" placeholder="Enter confirm password: " name="val"><br>
+			<input type="text" placeholder="Enter Address: " name="val"><br>
+			<input type="text" placeholder="Enter Banasthali mail ID: " name="val"><br>
+			<input type="text" placeholder="Enter contact number: " name="val"><br>
+			<input type="submit">
+		</form>
+		<script>
+			function validate()
+			{
+				firstname=document.form[0].elements[0].value;
+				namePattern=/^[a-zA-Z]{2,20}$/;
+				if(namePattern.test(firstname)==false)
+				{
+					alert("Please Enter appropriate first name");
+					return false;
+				}
+				lastname=document.form[0].elements[1].value;
+				if(namePattern.test(lastname)==false)
+				{
+					alert("Please Enter appropriate last name");
+					return false;
+				}
+				userid=document.form[0].elements[2].value;
+				idPattern=/^[a-zA-Z]{5}[1-9][0-9]{4}$/;
+				if(idPattern.test(userid)==false)
+				{
+					alert("Please Enter appropriate userId");
+					return false;
+				}
+				password=document.form[0].elements[3].value;
+				passPattern=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/;
+				if(passPattern.test(password)==false)
+				{
+					alert("Please Enter appropriate password");
+					return false;
+				}
+				confirmpassword=document.form[0].elements[4].value;
+				if(confirmpassword!=password)
+				{
+					alert("Please Enter correct password");
+					return false;
+				}
+				address=document.form[0].elements[5].value;
+				addPattern=/[a-zA-Z0-9]\S+/;
+				if(addPattern.test(address)==false)
+				{
+					alert("Please Enter appropriate address");
+					return false;
+				}
+				email=document.form[0].elements[6].value;
+				emailPattern=/^\w+\w+@[a-zA-Z]+?\.[a-zA-Z]{2,3})$/;
+				if(emailPattern.test(email)==false)
+				{
+					alert("Please Enter appropriate email ID");
+					return false;
+				}
+				contact=document.form[0].elements[7].value;
+				contactPattern=/^[1-9][0-9]{9}$/;
+				if(contactPattern.test(contact)==false)
+				{
+					alert("Please Enter appropriate contact number");
+					return false;
+				}
+				return true;
+			}
+		</script>			
+			
+	</body>
+</html>

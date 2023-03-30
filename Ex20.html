@@ -1,0 +1,512 @@
+<!-- Implement a one page personal website to present your resume. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise20</title>
+    <style>
+        * {
+            margin: 0%;
+        }
+        
+        .container1 {
+            width: 100%;
+            height: 600px;
+            background-color: rgb(231, 99, 50);
+        }
+
+        .box1 {
+            position: absolute;
+            background-color: beige;
+            width: 75%;
+            height: 400px;
+            margin-top: 100px;
+            margin-left: 185px;
+            box-shadow: 6px 6px rgba(228, 61, 0, 0.6);
+        }
+
+        .container1 .box1 img {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            margin-top: -45px;
+            margin-left: 40%;
+        }
+
+        .container1 .box1 p {
+            text-align: left;
+
+            font-size: 30px;
+            font-weight: 700;
+            color: rgb(31, 30, 30);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 100px;
+        }
+
+        .container1 .box1 p span {
+            color: rgb(231, 99, 50);
+        }
+
+        .container2 {
+            width: 100%;
+            height: 700px;
+            background-color: rgb(120, 215, 228);
+        }
+
+        .box2 {
+            position: absolute;
+            background-color: beige;
+            width: 85%;
+            height: 530px;
+            margin-top: 110px;
+            margin-left: 100px;
+            box-shadow: 6px 6px rgba(8, 152, 172, 0.6);
+        }
+
+        .border {
+            height: 530px;
+            width: 40px;
+            background-color: rgba(202, 194, 194, 0.4);
+        }
+
+        .container2 .box2 .border img {
+            height: 80px;
+            width: 80px;
+            margin-left: -20px;
+            margin-top: 23px;
+        }
+
+        #hd1 {
+            margin-left: 75px;
+            font-size: 50px;
+            margin-top: -470px;
+        }
+
+        #hd2 {
+            margin-left: 75px;
+            margin-top: 4px;
+        }
+
+        .container2 .box2 .content {
+            display: flex;
+        }
+
+        .container2 .box2 .content .p1 {
+            margin-top: 20px;
+            margin-left: 75px;
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .container2 .box2 .content .p2 {
+            margin-top: 20px;
+            margin-left: 75px;
+            text-align: justify;
+            padding-right: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .container3 {
+            width: 100%;
+            height: 700px;
+            background-color: rgb(188, 120, 228);
+        }
+
+        .box3 {
+            position: absolute;
+            background-color: beige;
+            width: 85%;
+            height: 530px;
+            margin-top: 110px;
+            margin-left: 100px;
+            box-shadow: 6px 6px rgba(150, 30, 219, 0.6);
+        }
+
+        .container3 .box3 .border img {
+            height: 80px;
+            width: 80px;
+            margin-left: -20px;
+            margin-top: 23px;
+            border-radius: 50%;
+        }
+
+        .container3 .box3 .content1 {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .container3 .box3 .content2 {
+            display: flex;
+        }
+
+        .container3 .box3 .content1 .p1 {
+            width: 30%;
+            margin-top: 20px;
+            margin-left: 75px;
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 18px;
+
+        }
+
+        .container3 .box3 .content2 .p1 {
+            width: 30%;
+            margin-top: 20px;
+            margin-left: 75px;
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 18px;
+
+        }
+
+        #p1 {
+            padding-right: 30px;
+        }
+
+        #p2 {
+            padding-right: 30px;
+        }
+
+        .container3 .box3 .content2 .p1 span {
+            color: rgb(231, 99, 50);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .container3 .box3 .content1 .p1 span {
+            color: rgb(231, 99, 50);
+            font-size: 25px;
+            font-weight: 700;
+        }
+        
+        .container4 {
+            width: 100%;
+            height: 700px;
+            background-color: rgb(241, 239, 101);
+        }
+
+        .box4 {
+            position: absolute;
+            background-color: beige;
+            width: 85%;
+            height: 530px;
+            margin-top: 110px;
+            margin-left: 100px;
+            box-shadow: 6px 6px rgba(241, 238, 38, 0.6);
+        }
+
+        .container4 .box4 .border img {
+            height: 80px;
+            width: 80px;
+            margin-left: -20px;
+            margin-top: 23px;
+            border-radius: 50%;
+        }
+        .container4 .box4 .content1 {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .container4 .box4 .content2 {
+            display: flex;
+        }
+
+        .container4 .box4 .content1 .p1 {
+            width: 40%;
+            margin-top: 25px;
+            margin-left: 75px;
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 18px;
+
+        }
+
+        .container4 .box4 .content2 .p1 {
+            width: 40%;
+            margin-top: 25px;
+            margin-left: 75px;
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 18px;
+
+        }
+        .container4 .box4 .content2 .p1 span {
+            color: rgb(231, 99, 50);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .container4 .box4 .content1 .p1 span {
+            color: rgb(231, 99, 50);
+            font-size: 25px;
+            font-weight: 700;
+        }
+        .container5 {
+            width: 100%;
+            height: 700px;
+            background-color: rgb(52, 233, 121);
+            
+        }
+
+        .box5 {
+            position: absolute;
+            background-color: beige;
+            width: 85%;
+            height: 530px;
+            margin-top: 110px;
+            margin-left: 100px;
+            box-shadow: 6px 6px rgba(0, 197, 76, 0.6);
+            
+
+        }
+
+
+        .container5 .box5 .border img {
+            height: 80px;
+            width: 80px;
+            margin-left: -20px;
+            margin-top: 23px;
+            border-radius: 50%;
+        }
+        .container5 .box5 .paintings{
+            display: flex;
+        }
+
+        .container5 .box5 .paintings .card {
+  position: relative;
+  
+  width: 180px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  padding: 30px 50px;
+  background: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 80px;
+  margin-top: 90px;
+ 
+}
+
+.container5 .box5 .paintings .card:hover {
+  height: 200px;
+}
+
+.container5 .box5 .paintings .imgbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-80px);
+  z-index: 99;
+}
+
+.container5 .box5 .paintings img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container5 .box5 .paintings .content {
+  padding: 10px 20px;
+  text-align: center;
+  transform: translateY(-750px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.container5 .box5 .paintings .card:hover > .content {
+  opacity: 1;
+  transform: translateY(-100px);
+}
+
+.container5 .box5 .paintings .content h2 {
+  color: rgb(231, 99, 50);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="box1">
+            <img src="images\logo.jpg" alt="">
+            <p>I’m <b>Akanksha Mittal</b>, a tech student, developer, and artiste.<br><br>
+                I’m originally from Katihar, Bihar but these days I live in Jaipur, Rajasthan.<br><br>
+                <span>Say hello</span>, or keep scrolling!
+            </p>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="box2">
+            <div class="border">
+                <img src="images\bio.png" alt="">
+            </div>
+            <h1 id="hd1">Bio</h1>
+            <h2 id="hd2">A little more about me.</h2>
+            <div class="content">
+                <div class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur consequatur nemo
+                    quasi sint excepturi
+                    natus, assumenda repellat. Magnam provident quas maiores, omnis dicta non quo illo reprehenderit
+                    repellat odit excepturi ipsam
+                    voluptatum.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum quia sunt
+                    et accusamus vero
+                    mollitia officiis tempore iusto praesentium.<br><br>Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Iure, inventore.
+                </div>
+                <div class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur consequatur nemo
+                    quasi sint excepturi
+                    natus, assumenda repellat. Magnam provident quas maiores, omnis dicta non quo illo reprehenderit
+                    repellat odit excepturi ipsam
+                    voluptatum.<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quos commodi
+                    debitis, quisquam
+                    recusandae cumque est? Repellat numquam cum beatae!<br><br>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Magnam, officiis?
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container3">
+        <div class="box3">
+            <div class="border">
+                <img src="images\code.png" alt="">
+            </div>
+            <h1 id="hd1">Code</h1>
+            <h2 id="hd2">The duct tape that keeps the world together.</h2>
+            <div class="content1">
+                <div class="p1"><span>C++</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+                </div>
+                <div class="p1"><span>Java</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+
+                </div>
+                <div class="p1" id="p1"><span>Sql</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+                </div>
+            </div>
+            <div class="content2">
+                <div class="p1"><span>HTML</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+
+                </div>
+                <div class="p1"><span>CSS</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+
+                </div>
+                <div class="p1" id="p2"><span>JavaScript</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Consectetur consequatur nemo quasi sint excepturi
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container4">
+        <div class="box4">
+            <div class="border">
+                <img src="images\project.png" alt="">
+            </div>
+            <h1 id="hd1">Projects</h1>
+            <h2 id="hd2">1. Get Idea; 2. Launch; 3. ???; 4. Profit</h2>
+            <div class="content1">
+                <div class="p1"><span>Toxic Gas Detector</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+                </div>
+                <div class="p1"><span>Personal Portfolio</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+
+                </div>
+              
+            </div>
+            <div class="content2">
+                <div class="p1"><span>Landing Page for Educational website </span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+
+                </div>
+                <div class="p1"><span>Code Page</span><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur consequatur nemo quasi sint excepturi
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container5">
+        <div class="box5">
+            <div class="border">
+                <img src="images\drawing.jpg" alt="">
+            </div>
+            <h1 id="hd1">Illustrations</h1>
+            <h2 id="hd2">Like coding, but with fewer bugs and more perfection.</h2>
+           <div class="paintings">
+            <div class="card">
+                <div class="imgbox">
+                  <img
+                    src="images\portfolio-5.webp"
+                  />
+                </div>
+          
+                <div class="content">
+                  <h2>"Eyes are never quiet"</h2>
+                  <p>
+                    Colourful one eye drawing with pencil colors
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="imgbox">
+                  <img
+                    src="images\portfolio-7.jpg"
+                  />
+                </div>
+          
+                <div class="content">
+                  <h2>"Symmetry is in everything"</h2>
+                  <p>
+                    Mandala art using white pen and black sheet
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="imgbox">
+                  <img
+                    src="images\portfolio-8.jpg"
+                  />
+                </div>
+          
+                <div class="content">
+                  <h2>"The beauty is in details"</h2>
+                  <p>
+                    Zentamgles using blue gel pen and white sheet
+                  </p>
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

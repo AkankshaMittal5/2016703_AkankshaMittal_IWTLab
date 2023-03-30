@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Text Color
+        </title>
+        <style>
+        #d1{
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <h1 align="center">TEXT GROWING AND SHRINKING</h1>
+        <div id="d1"></div>
+        <script type="text/javascript">
+            size=5;
+            i=setInterval(increase,100);
+            function increase(){
+                t1=document.getElementById("d1");
+                t1.innerHTML="TEXT-GROWING";
+                s=size++;
+                t1.style.fontSize=s+"px";
+                t1.style.color="red";
+                if(size==50){
+                    clearInterval(i);
+                    d=setInterval(decrease,100);
+                }
+            }
+            function decrease(){
+                t1=document.getElementById("d1");
+                t1.innerHTML="TEXT-SHRINKING";
+                s=size--;
+                t1.style.fontSize=s+"px";
+                t1.style.color="blue";
+                if(size==5){
+                    clearInterval(d);
+                    i=setInterval(increase,100);
+                }
+            }
+        </script>
+    </body>
+</html>

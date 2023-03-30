@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Exercise26
+        </title>
+        <style>
+            body{
+                background-color: rgb(233, 231, 105);
+            }
+            #timer{
+                height: 100px;
+                width: 100px;
+                box-shadow: 3px 3px rgb(52, 250, 184);
+                border-radius: 20px;
+                background-color: aquamarine;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
+                padding: 30px;
+                margin-top: 200px;
+                margin-left: 600px;
+                margin-bottom: 10px;
+
+            }
+            .btn1{
+                margin-left: 600px;
+                padding:5px;
+                background-color: palevioletred;
+                border-radius: 5px;
+            }
+            .btn2{
+                margin-left: 45px;
+                padding:5px;
+                background-color: palevioletred;
+                border-radius: 5px;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <h1 align="center">STOPWATCH</h1>
+        <div id="timer"></div>
+        <script>
+            Count=0;
+            function start()
+            {
+            
+                block=document.getElementById('timer');
+                block.innerHTML=Count;
+                Count++;
+            }
+            //onclick="x=setInterval(start,1000)";
+        </script>
+        <div class="clock">
+            <button class="btn1" onclick="x=setInterval(start,1000)">START</button>
+            <button class="btn2" onclick="clearInterval(x)">STOP</button>
+        </div>
+    </body>
+</html>
